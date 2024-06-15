@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halaman Pemesanan Makanan Online</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <style>
+    .card:hover {
+      transform: translateY(-5px);
+      transition: transform 0.3s ease;
+    }
+
+    /* Footer text color */
+    footer {
+      color: #fff;
+    }
+  </style>
+  <body>
+    <header class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="https://via.placeholder.com/120x40.png?text=Logo+Restoran"
+            alt="Logo Restoran"
+            width="120"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                >Beranda</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Tentang Kami</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Kontak</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pesan Sekarang</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <div class="container mt-4">
+      <h2 class="text-center mb-4">Selamat Datang di Restoran XYZ!</h2>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <img
+              src="https://via.placeholder.com/300x200.png?text=Menu+1"
+              class="card-img-top"
+              alt="Menu 1"
+              data-bs-toggle="modal"
+              data-bs-target="#menuModal1"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Nasi Goreng Special</h5>
+              <p class="card-text">
+                Nasi goreng spesial dengan daging ayam, telur, dan sayuran.
+              </p>
+              <a
+                href="#"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#menuModal1"
+                >Pesan Sekarang</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <img
+              src="https://via.placeholder.com/300x200.png?text=Menu+2"
+              class="card-img-top"
+              alt="Menu 2"
+              data-bs-toggle="modal"
+              data-bs-target="#menuModal2"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Pizza Pepperoni</h5>
+              <p class="card-text">
+                Pizza dengan topping pepperoni, keju, dan saus tomat.
+              </p>
+              <a
+                href="#"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#menuModal2"
+                >Pesan Sekarang</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <img
+              src="https://via.placeholder.com/300x200.png?text=Menu+3"
+              class="card-img-top"
+              alt="Menu 3"
+              data-bs-toggle="modal"
+              data-bs-target="#menuModal3"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Sushi Set</h5>
+              <p class="card-text">
+                Set sushi dengan berbagai jenis sushi yang segar.
+              </p>
+              <a
+                href="#"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#menuModal3"
+                >Pesan Sekarang</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modals for each menu -->
+    <div
+      class="modal fade"
+      id="menuModal1"
+      tabindex="-1"
+      aria-labelledby="menuModal1Label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="menuModal1Label">
+              Nasi Goreng Special
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img
+              src="https://via.placeholder.com/300x200.png?text=Menu+1"
+              class="img-fluid mb-3"
+              alt="Menu 1"
+            />
+            <p>Nasi goreng spesial dengan daging ayam, telur, dan sayuran.</p>
+            <form>
+              <div class="mb-3">
+                <label for="quantityMenu1" class="form-label"
+                  >Jumlah Pesanan</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="quantityMenu1"
+                  value="1"
+                  min="1"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="totalPriceMenu1" class="form-label"
+                  >Total Harga</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="totalPriceMenu1"
+                  value="Rp 50,000"
+                  readonly
+                />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Batal
+            </button>
+            <button type="button" class="btn btn-primary">
+              Pesan Sekarang
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="menuModal2"
+      tabindex="-1"
+      aria-labelledby="menuModal2Label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="menuModal2Label">Pizza Pepperoni</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img
+              src="https://via.placeholder.com/300x200.png?text=Menu+2"
+              class="img-fluid mb-3"
+              alt="Menu 2"
+            />
+            <p>Pizza dengan topping pepperoni, keju, dan saus tomat.</p>
+            <form>
+              <div class="mb-3">
+                <label for="quantityMenu2" class="form-label"
+                  >Jumlah Pesanan</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="quantityMenu2"
+                  value="1"
+                  min="1"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="totalPriceMenu2" class="form-label"
+                  >Total Harga</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="totalPriceMenu2"
+                  value="Rp 75,000"
+                  readonly
+                />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Batal
+            </button>
+            <button type="button" class="btn btn-primary">
+              Pesan Sekarang
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="menuModal3"
+      tabindex="-1"
+      aria-labelledby="menuModal3Label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="menuModal3Label">Sushi Set</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img
+              src="https://via.placeholder.com/300x200.png?text=Menu+3"
+              class="img-fluid mb-3"
+              alt="Menu 3"
+            />
+            <p>Set sushi dengan berbagai jenis sushi yang segar.</p>
+            <form>
+              <div class="mb-3">
+                <label for="quantityMenu3" class="form-label"
+                  >Jumlah Pesanan</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="quantityMenu3"
+                  value="1"
+                  min="1"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="totalPriceMenu3" class="form-label"
+                  >Total Harga</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="totalPriceMenu3"
+                  value="Rp 100,000"
+                  readonly
+                />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Batal
+            </button>
+            <button type="button" class="btn btn-primary">
+              Pesan Sekarang
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-dark text-white py-4">
+      <div class="container text-center">
+        <p>&copy; 2024 Restoran XYZ. All rights reserved.</p>
+        <p>Alamat: Jl. Contoh No. 123, Kota Contoh, Indonesia</p>
+        <p>Telepon: +62 123 456789 | Email: info@restoranxyz.com</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
